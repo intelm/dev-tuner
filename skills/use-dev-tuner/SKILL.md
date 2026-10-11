@@ -8,7 +8,7 @@ description: Add dev-tuner (Airship + DialKit dev toolbar) to a React/Vite proje
 dev-tuner is a dev-only toolbar for React apps. It toggles two tools, one on at a time:
 **Airship** (visual editor, a proxy in front of the dev server) and **Dials** (DialKit:
 click an element, tune its styles, scoped to a class, with an Edited tab showing v0 and reset).
-Source: `/Users/intel/AI-Lab/mhmdlsyd/dev-tuner` (README has the full reference).
+Source: https://github.com/intelm/dev-tuner (README has the full reference).
 
 ## 1. Check the project fits
 
@@ -18,13 +18,16 @@ Source: `/Users/intel/AI-Lab/mhmdlsyd/dev-tuner` (README has the full reference)
 
 ## 2. Install
 
-Use the local checkout unless the user has pushed it to a git remote (then use `github:<owner>/dev-tuner`):
+Install from GitHub (a tarball, because `npm i github:...` git installs fail on npm 11.19 with an
+`--allow-scripts` error). `dist/` is committed, so nothing builds on install:
 
 ```bash
-npm i /Users/intel/AI-Lab/mhmdlsyd/dev-tuner dialkit motion
+npm i https://codeload.github.com/intelm/dev-tuner/tar.gz/refs/heads/main dialkit motion
 ```
 
-Skip `dialkit` and `motion` if already present. If the checkout's `dist/` is missing, run `npm run build` in it first.
+Skip `dialkit` and `motion` if already present. To track the latest changes later, re-run the same command.
+If developing dev-tuner itself, link the local checkout instead: `npm i /Users/intel/AI-Lab/mhmdlsyd/dev-tuner`
+(run `npm run build` there after edits).
 
 ## 3. Vite config
 

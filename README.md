@@ -15,8 +15,8 @@ Dials details:
 ```bash
 # from a local checkout while developing
 npm i ../dev-tuner           # or: npm link dev-tuner
-# or from git
-npm i github:<you>/dev-tuner
+# from GitHub (tarball; `github:` git installs fail on npm 11.19)
+npm i https://codeload.github.com/intelm/dev-tuner/tar.gz/refs/heads/main
 npm i dialkit motion         # peer dependencies, if the app doesn't have them
 ```
 
