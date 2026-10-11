@@ -23,7 +23,7 @@
   "scripts": {
     "build": "tsc -p tsconfig.json && cp src/dev-tuner.css dist/dev-tuner.css",
     "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
-    "prepare": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "dialkit": ">=2.0.2",

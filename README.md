@@ -87,6 +87,8 @@ Then ask Claude to "use dev-tuner in this project".
 
 ## Develop
 
+`dist/` is committed so git installs need no build step. Run `npm run build` and commit `dist/` after changing `src/`.
+
 ```bash
 npm run dev     # tsc --watch into dist/
 npm run build
