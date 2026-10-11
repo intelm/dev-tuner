@@ -1,0 +1,43 @@
+{
+  "name": "dev-tuner",
+  "version": "0.1.0",
+  "description": "Dev-only toolbar for React apps: toggle Airship and DialKit, pick elements, tune styles at class level, and track edits with v0 and reset.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "skills"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json && cp src/dev-tuner.css dist/dev-tuner.css",
+    "dev": "tsc -p tsconfig.json --watch --preserveWatchOutput",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "dialkit": ">=2.0.2",
+    "motion": ">=12",
+    "react": "^18 || ^19",
+    "react-dom": "^18 || ^19"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "dialkit": "^2.0.2",
+    "motion": "^14.1.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "typescript": "~6.0.2"
+  }
+}
